@@ -1,1 +1,1 @@
-# Portfolio pessoal ultilizando ReactJS
+# Portfolio pessoal ultilizando HTML, CSS e JavaScript
