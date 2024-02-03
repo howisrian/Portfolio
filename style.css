@@ -20,7 +20,7 @@ body{
 }
 
 
-.efeito-txt-topo, .efeito-img-topo, .titulo, .especialidades-box{
+.hidden-topo, .titulo, .hidden-especialidades, .hidden-sobre, .hidden-port, .hidden-form{
     visibility: hidden;
 }
 
