@@ -19,6 +19,13 @@ body{
     display: flex;
 }
 
+
+.efeito-txt-topo, .efeito-img-topo, .titulo, .especialidades-box{
+    visibility: hidden;
+}
+
+
+
 .btn-contato button{
     padding: 10px 40px;
     font-size: 18px;
@@ -75,6 +82,7 @@ header nav.menu-desktop a{
     text-decoration: none;
     display: inline-block;
     transition: .2s;
+
 }
 header nav.menu-desktop a:hover{
     color: #fff;
@@ -95,6 +103,7 @@ header nav.menu-desktop ul li{
 .btn-abrir-menu i{
     color: #00ff08;
     font-size: 40px;
+    display: none;
 }
 
 .menu-mobile{
@@ -111,6 +120,7 @@ header nav.menu-desktop ul li{
 
 .menu-mobile.abrir-menu{
     width: 70%;  
+
 }
 
 .menu-mobile.abrir-menu ~ .overlay-menu{
@@ -161,7 +171,7 @@ header nav.menu-desktop ul li{
                                     /* ESTILO TOPO DO SITE */
 
 section.topo-do-site{
-    padding: 40px 4%;
+    padding: 90px 4%;
 }
 section.topo-do-site .flex{  
     align-items: center;
@@ -199,7 +209,7 @@ section.topo-do-site .flex{
 /* ESTILO ESPECIALIDADES */
 
 section.especialidades{
-    padding: 40px 4%;
+    padding: 300px 4%;
 }
 
 section.especialidades .flex{
@@ -232,7 +242,7 @@ section.especialidades .flex{
                                         /* ESTILO SOBRE */
 
 section.sobre{
-    padding: 80px 4%;
+    padding: 150px 4%;
 }
 
 section.sobre .flex{
@@ -266,7 +276,7 @@ section.sobre .flex{
                                             /* ESTIlO PORTFOLIO */
 
 section.portfolio{
-    padding: 80px 4%;
+    padding: 150px 4%;
     box-shadow: 0px 0px 40px 10px #ffffff1d;
 }
 
@@ -315,7 +325,7 @@ section.portfolio .flex{
                                             /* ESTILO FORMULARIO */
 
 section.formulario{
-    padding: 40px 4%;
+    padding: 100px 4%;
 }
 
 form{
@@ -361,7 +371,7 @@ form .btn-enviar input{
 /* ESTILO RODAPE */
 
 footer{
-    padding: 40px 4%;
+    padding: 100px 4%;
     box-shadow: 0px 0px 40px 10px #ffffff1d;
 }
 
@@ -403,6 +413,10 @@ footer .line-footer p a{
     /* CABEÇALHO */
     .menu-desktop, .btn-contato{
         display: none;
+    }
+
+    .btn-abrir-menu i{
+        display: flex;
     }
 
     /* TOPO DO SITE */
