@@ -40,6 +40,18 @@ h2.titulo span{
     color: #00ff08;
 }
 
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #00ff08;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
 button:hover, form .btn-enviar input:hover{
     box-shadow: 0px 0px 8px #00ff089c;
     transform: scale(1.05);
@@ -184,23 +196,13 @@ section.sobre .flex{
     text-align: justify;
 }
 
-.sobre .txt-sobre .btn-social button{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 0;
-    background-color: #00ff08;
-    font-size: 22px;
-    cursor: pointer;
-    margin: 0 5px;
-    transition: .2s;
-}
 
-                                            /* ESTIPO PORTFOLIO */
+
+                                            /* ESTIlO PORTFOLIO */
 
 section.portfolio{
     padding: 80px 4%;
-    box-shadow: 0px 0px 40px 10px #ffffff1a;
+    box-shadow: 0px 0px 40px 10px #ffffff1d;
 }
 
 section.portfolio .flex{
@@ -289,5 +291,35 @@ form .btn-enviar input{
     font-weight: 700;
     cursor: pointer;
     transition: .2s;
+}
+
+/* ESTILO RODAPE */
+
+footer{
+    padding: 40px 4%;
+    box-shadow: 0px 0px 40px 10px #ffffff1d;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid #00ff08;
+}
+
+footer .line-footer p i{
+    color: #00ff08;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: #fff;
+    text-decoration: none;
+
 }
 
