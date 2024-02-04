@@ -79,7 +79,11 @@ button:hover, form .btn-enviar input:hover{
                                                 /* ESTILO CABEÇALHO */
 
 header{
-    padding: 40px 4%;
+    height: 80px;
+    width: 100%;
+    z-index: 7777;
+    background-color: #000;
+    position: fixed;
 }
 
 header > .interface{
@@ -89,11 +93,14 @@ header > .interface{
 }
 
 header .logo a img{
-    width:90px;
+    width:60px;
+    margin-left: 40px;
+    margin-top: 20px;
 }
 
 header nav.menu-desktop a{
     color: #7d7d7d;
+    font-size: 12px;
     text-decoration: none;
     display: inline-block;
     transition: .2s;
@@ -113,12 +120,17 @@ header nav.menu-desktop ul li{
     padding: 0 40px;
 }
 
+header .btn-contato a button{
+    font-size: 14px;
+}
+
                                             /* ESTILO MENU MOBILE */
 
 .btn-abrir-menu i{
     color: #00ff08;
-    font-size: 40px;
+    font-size: 30px;
     display: none;
+    margin-right: 30px;
 }
 
 .menu-mobile{
@@ -428,6 +440,16 @@ footer .line-footer p a{
     }
 
     /* CABEÇALHO */
+
+    header{
+        height: 65px;
+    }
+
+    header .logo a img{
+        width:50px;
+        
+    }
+
     .menu-desktop, .btn-contato{
         display: none;
     }
