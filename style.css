@@ -83,8 +83,8 @@ header{
     width: 100%;
     z-index: 7777;
     background-color: transparent;
-    border: px solid #000;
-    backdrop-filter: blur(10px);
+    border: 1px solid #00000044;
+    backdrop-filter: blur(7px);
     position: fixed;
 }
 
