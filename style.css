@@ -166,7 +166,7 @@ header nav.menu-desktop ul li{
                                     /* ESTILO TOPO DO SITE */
 
 section.topo-do-site{
-    padding: 90px 4%;
+    padding: 20px 4%;
 }
 section.topo-do-site .flex{  
     align-items: center;
@@ -201,10 +201,10 @@ section.topo-do-site .flex{
     }
 }
 
-/* ESTILO ESPECIALIDADES */
+                                                /* ESTILO ESPECIALIDADES */
 
 section.especialidades{
-    padding: 300px 4%;
+    padding: 220px 4%;
 }
 
 section.especialidades .flex{
@@ -225,12 +225,12 @@ section.especialidades .flex{
 }
 
 .especialidades .especialidades-box i{
-    font-size: 70px;
+    font-size: 60px;
     color: #00ff08;
 }
 
 .especialidades .especialidades-box h3{
-    font-size: 28px;
+    font-size: 20px;
     margin: 15px 0;
 }
 
