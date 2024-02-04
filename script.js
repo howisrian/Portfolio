@@ -70,14 +70,14 @@ revelar.reveal('.efeito-especialidade3',
 revelar.reveal('.efeito-img-sobre', 
 {
     duration: 3000,
-    distance: '90px',
+    distance: '50px',
     delay: 500,
     origin: 'left'
 })
 revelar.reveal('.efeito-txt-sobre', 
 {
     duration: 5000,
-    distance: '90px',
+    distance: '50px',
     delay: 800,
     origin: 'right'
 })
