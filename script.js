@@ -76,7 +76,7 @@ revelar.reveal('.efeito-img-sobre',
 })
 revelar.reveal('.efeito-txt-sobre', 
 {
-    duration: 5000,
+    duration: 4000,
     distance: '50px',
     delay: 800,
     origin: 'right'
