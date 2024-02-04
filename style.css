@@ -1,10 +1,11 @@
-/* ESTILO GERAL */
+                                                /* ESTILO GERAL */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 body{
     background-color: #000;
     height: 100vh;
@@ -19,12 +20,9 @@ body{
     display: flex;
 }
 
-
 .hidden-topo, .titulo, .hidden-especialidades, .hidden-sobre, .hidden-port, .hidden-form{
     visibility: hidden;
 }
-
-
 
 .btn-contato button{
     padding: 10px 40px;
@@ -65,7 +63,7 @@ button:hover, form .btn-enviar input:hover{
 }
 
 
-/* ESTILO CABEÇALHO */
+                                                /* ESTILO CABEÇALHO */
 
 header{
     padding: 40px 4%;
@@ -98,7 +96,7 @@ header nav.menu-desktop ul li{
     padding: 0 40px;
 }
 
-/* ESTILO MENU MOBILE */
+                                            /* ESTILO MENU MOBILE */
 
 .btn-abrir-menu i{
     color: #00ff08;
@@ -164,9 +162,6 @@ header nav.menu-desktop ul li{
     z-index: 8888;
     display: none;
 }
-
-
-
 
                                     /* ESTILO TOPO DO SITE */
 
@@ -270,10 +265,7 @@ section.sobre .flex{
     margin: 20px 0;
     text-align: justify;
 }
-
-
-
-                                            /* ESTIlO PORTFOLIO */
+                                        /* ESTIlO PORTFOLIO */
 
 section.portfolio{
     padding: 150px 4%;
@@ -397,6 +389,8 @@ footer .line-footer p a{
     text-decoration: none;
 
 }
+
+                                                /* ESTILO MOBILE */
 
 @media screen and (max-width: 1020px) {
 
