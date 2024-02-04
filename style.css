@@ -208,7 +208,7 @@ section.topo-do-site .flex{
                                                 /* ESTILO ESPECIALIDADES */
 
 section.especialidades{
-    padding: 220px 4%;
+    padding: 90px 4%;
 }
 
 section.especialidades .flex{
@@ -278,6 +278,7 @@ section.portfolio{
 
 section.portfolio .flex{
     margin-top: 60px;
+    gap: 70px;
     justify-content: space-around;
 }
 
@@ -373,6 +374,10 @@ footer{
 
 footer .flex{
     justify-content: space-between;
+}
+
+footer .logo-footer img{
+    width:90px;
 }
 
 footer .line-footer{

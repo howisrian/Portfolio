@@ -102,6 +102,12 @@ revelar.reveal('.efeito-img-port3',
     distance: '90px',
     delay: 1500
 })
+revelar.reveal('.efeito-img-port4', 
+{
+    duration: 1000,
+    distance: '90px',
+    delay: 2000
+})
 
 // FORMULARIO
 
