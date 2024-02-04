@@ -574,6 +574,14 @@ body.dark{
     background-color: #fff;
 }
 
+body.dark .menu-mobile{
+    background-color: #c3c3c3;
+}
+
+body.dark .menu-mobile nav ul li a{
+    color: #000;
+}
+
 body.dark .titulo{
     color: #000;
 }
@@ -586,3 +594,4 @@ body.dark .formulario .input-dark{
     background-color: #cdcdcd;
     color: #000;
 }
+

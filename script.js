@@ -10,8 +10,6 @@ trilho.addEventListener('click', () =>{
 
 
 
-
-
 // MENU MOBILE
 
 let btnMenu = document.getElementById('btn-menu')
