@@ -454,6 +454,12 @@ header .trilho .indicador{
     transition: .5s;
 }
 
+header .trilho .indicador i{
+    color: #ffffff;
+    margin-left: 4px;
+    font-size: 22px;
+}
+
 .trilho.dark{
     background-color: #c3c3c3;
 }
@@ -461,6 +467,10 @@ header .trilho .indicador{
 .trilho.dark .indicador{
     left: 20px;
     background-color: #fff;
+}
+
+.trilho.dark .indicador i{
+    color: #000;
 }
 
 body.dark{
