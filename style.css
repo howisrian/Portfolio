@@ -85,6 +85,7 @@ header{
     z-index: 7777;
     background-color: transparent;
     border: 1px solid #00000044;
+    border-left: none;
     backdrop-filter: blur(7px);
     position: fixed;
 }
@@ -173,7 +174,7 @@ header .btn-contato a button{
     text-align: right;
 }
 
-.menu-mobile nav ul li a{
+.menu-mobile nav ul li a, .menu-mobile nav ul li .trilho .indicador .btn-dark{
     color: #fff;
     text-decoration: none;
     font-size: 20px;
@@ -524,7 +525,7 @@ body.dark .formulario .input-dark{
         
     }
 
-    .menu-desktop, .btn-contato, .btn-dark{
+    .menu-desktop, .btn-contato, .btn-dark-desktop{
         display: none;
     }
 
