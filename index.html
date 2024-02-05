@@ -152,12 +152,14 @@
             <div class="interface">
                 <h2 class="titulo efeito-txt-dark">FALE <span>COMIGO.</span></h2>
 
-                <form action="" class="hidden-form">
-                    <input type="text" class="efeito-input1 input-dark" name="" id="" placeholder="Seu nome:" required>
-                    <input type="text" class="efeito-input2 input-dark" name="" id="" placeholder="Seu email:" required>
-                    <input type="text" class="efeito-input3 input-dark" name="" id="" placeholder="Seu celular:">
-                    <textarea class="efeito-input4 input-dark" name="" id="" placeholder="Sua mensagem:" required></textarea>
-                    <div class="btn-enviar efeito-input5"><input type="submit" value="ENVIAR"></div>
+                <form action="/processa-formulario.php" method="post">
+                    <input type="text" class="efeito-input1 input-dark" name="nome" placeholder="Seu nome:" required>
+                    <input type="email" class="efeito-input2 input-dark" name="email" placeholder="Seu e-mail:" required>
+                    <input type="text" class="efeito-input3 input-dark" name="celular" placeholder="Seu celular:">
+                    <textarea class="efeito-input4 input-dark" name="mensagem" placeholder="Sua mensagem:" required></textarea>
+                    <div class="btn-enviar efeito-input5">
+                      <input type="submit" value="ENVIAR">
+                    </div>
                 </form>
             </div><!--interface-->
         </section><!--formulario-->
