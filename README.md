@@ -16,7 +16,7 @@ Portfólio web desenvolvido com o intuito de apresentar minhas habilidades técn
 
 ![Habilidades section](./.github/habilidades.jpeg)
 
-![Sobre section](./.github/dsobre.jpeg)
+![Sobre section](./.github/sobre.jpeg)
 
 ![Projetos section](./.github/projetos.jpeg)
 
