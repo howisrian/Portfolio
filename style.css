@@ -220,12 +220,17 @@ section.topo-do-site .flex{
     color: #00ff08;
 }
 
+.topo-do-site .txt-topo-site{
+    width: 300vh;
+}
+
 .topo-do-site .txt-topo-site p {
     color: #fff;
     margin: 40px 0px;
 }
 
 .topo-do-site .img-topo-site img{
+    width: 500px;
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
 }
