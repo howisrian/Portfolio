@@ -12,16 +12,22 @@ Portfólio web desenvolvido com o intuito de apresentar minhas habilidades técn
 
 ## Layout web
 
+### Inicio
 ![Inicio section](./.github/inicio.png)
 
+### Habilidades
 ![Habilidades section](./.github/habilidades.jpeg)
 
+### Sobre
 ![Sobre section](./.github/sobre.jpeg)
 
+### Projetos
 ![Projetos section](./.github/projetos.jpeg)
 
+### Contato
 ![Contato section](./.github/contato.jpeg)
 
+### Modo claro
 ![Modo claro section](./.github/claro.jpeg)
 
 
