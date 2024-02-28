@@ -552,6 +552,10 @@ body.dark .formulario .input-dark{
     .topo-do-site h1{
         font-size: 30px;
     }
+  
+    .topo-do-site .txt-topo-site{
+        width: 100%;
+    }
 
     .topo-do-site .img-topo-site img{
         width: 100%;
