@@ -41,7 +41,6 @@ Portfólio web desenvolvido com o intuito de apresentar minhas habilidades técn
 
 Rian Carlo Santana dos Santos
 
-https://www.linkedin.com/in/santos-rian/
 
 - Github: [@howisrian](https://www.github.com/howisrian)
 - Linkedin: [Rian Santos](https://www.linkedin.com/in/santos-rian/)
