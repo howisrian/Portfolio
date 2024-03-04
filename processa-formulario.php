@@ -1,24 +1,30 @@
 <?php
+// Verifica se o formulário foi submetido
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $nome = $_POST["nome"];
-  $email = $_POST["email"];
-  $celular = $_POST["celular"];
-  $mensagem = $_POST["mensagem"];
-
-  // Configurar o e-mail
-  $destinatario = "riansantos.dev@gmail.com";
-  $assunto = "Nova mensagem do formulário";
-  $corpo = "Nome: $nome\nE-mail: $email\nCelular: $celular\nMensagem: $mensagem";
-
-  // Enviar o e-mail
-  if (mail($destinatario, $assunto, $corpo)) {
-    echo "E-mail enviado com sucesso! Entrarei em contato em breve.";
-  } else {
-    echo "Ocorreu um erro ao enviar o e-mail. Por favor, tente novamente mais tarde.";
-  }
-
-  // Redirecionar o usuário após o envio
-  header("Location: obrigado.html");
-  exit;
+    // Configurações do e-mail
+    $para = "riansantos.dev@gmail.com"; // Coloque aqui o e-mail para onde deseja enviar
+    $assunto = "Novo contato pelo formulário";
+    
+    // Coleta os dados do formulário
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $celular = $_POST['celular'];
+    $mensagem = $_POST['mensagem'];
+    
+    // Monta o corpo do e-mail
+    $corpo_email = "Nome: $nome\n";
+    $corpo_email .= "Email: $email\n";
+    $corpo_email .= "Celular: $celular\n";
+    $corpo_email .= "Mensagem: $mensagem\n";
+    
+    // Envia o e-mail
+    if (mail($para, $assunto, $corpo_email)) {
+        // Se o e-mail foi enviado com sucesso, redireciona de volta para a página do formulário
+        header('Location: /pagina-de-agradecimento.html');
+        exit;
+    } else {
+        // Se houve um erro no envio do e-mail, exibe uma mensagem de erro
+        echo "Ocorreu um erro ao enviar o e-mail.";
+    }
 }
-?>
+
