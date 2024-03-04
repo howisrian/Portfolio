@@ -1,6 +1,6 @@
 <?php
 // Verifica se o formulário foi submetido
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Configurações do e-mail
     $para = "riansantos.dev@gmail.com"; 
     $assunto = "Novo contato pelo formulário";
