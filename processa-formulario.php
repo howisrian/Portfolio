@@ -2,7 +2,7 @@
 // Verifica se o formulário foi submetido
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Configurações do e-mail
-    $para = "riansantos.dev@gmail.com"; // Coloque aqui o e-mail para onde deseja enviar
+    $para = "riansantos.dev@gmail.com"; 
     $assunto = "Novo contato pelo formulário";
     
     // Coleta os dados do formulário
