@@ -1,30 +1,77 @@
 <?php
-// Verifica se o formulário foi submetido
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    // Configurações do e-mail
-    $para = "riansantos.dev@gmail.com"; 
-    $assunto = "Novo contato pelo formulário";
-    
-    // Coleta os dados do formulário
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $celular = $_POST['celular'];
-    $mensagem = $_POST['mensagem'];
-    
-    // Monta o corpo do e-mail
-    $corpo_email = "Nome: $nome\n";
-    $corpo_email .= "Email: $email\n";
-    $corpo_email .= "Celular: $celular\n";
-    $corpo_email .= "Mensagem: $mensagem\n";
-    
-    // Envia o e-mail
-    if (mail($para, $assunto, $corpo_email)) {
-        // Se o e-mail foi enviado com sucesso, redireciona de volta para a página do formulário
-        header('Location: /pagina-de-agradecimento.html');
-        exit;
-    } else {
-        // Se houve um erro no envio do e-mail, exibe uma mensagem de erro
-        echo "Ocorreu um erro ao enviar o e-mail.";
-    }
-}
+//Variáveis
 
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$celular = $_POST['celular'];
+$mensagem = $_POST['mensagem'];
+$data_envio = date('d/m/Y');
+$hora_envio = date('H:i:s');
+
+
+
+$arquivo = "
+  <style type='text/css'>
+  body {
+  margin:0px;
+  font-family:Verdane;
+  font-size:12px;
+  color: #666666;
+  }
+  a{
+  color: #666666;
+  text-decoration: none;
+  }
+  a:hover {
+  color: #FF0000;
+  text-decoration: none;
+  }
+  </style>
+    <html>
+        <table width='510' border='1' cellpadding='1' cellspacing='1' bgcolor='#CCCCCC'>
+            <tr>
+              <td>
+                <tr>
+                 <td width='500'>Nome:$nome</td>
+                </tr>
+                <tr>
+                  <td width='320'>E-mail:<b>$email</b></td>
+                </tr>
+                <tr>
+                  <td width='320'>Telefone:<b>$celular</b></td>
+                </tr>
+                <tr>
+                  <td width='320'>Mensagem:$mensagem</td>
+                </tr>
+            </td>
+          </tr>
+          <tr>
+            <td>Este e-mail foi enviado em <b>$data_envio</b> às <b>$hora_envio</b></td>
+          </tr>
+        </table>
+    </html>
+  ";
+
+
+  //enviar
+
+  // emails para quem será enviado o formulário
+  $emailenviar = "riansantos.dev@gmail.com";
+  $destino = $emailenviar;
+  $assunto = "Contato pelo Site";
+
+  // É necessário indicar que o formato do e-mail é html
+  $headers  = 'MIME-Version: 1.0' . "\r\n";
+      $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+      $headers .= 'From: $nome <$email>';
+  //$headers .= "Bcc: $EmailPadrao\r\n";
+
+  $enviaremail = mail($destino, $assunto, $arquivo, $headers);
+  if($enviaremail){
+  $mgm = "E-MAIL ENVIADO COM SUCESSO! <br> O link será enviado para o e-mail fornecido no formulário";
+  echo " <meta http-equiv='refresh' content='10;URL=contato.php'>";
+  } else {
+  $mgm = "ERRO AO ENVIAR E-MAIL!";
+  echo "";
+  }
+?>
