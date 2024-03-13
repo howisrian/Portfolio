@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/enviar" }
+    { "source": "/(.*)", "destination": "/server.js" }
   ]
 }
