@@ -11,39 +11,40 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
-app.post('/enviar', (req, res) => {
+app.post('/enviar', async (req, res) => {
     const nome = req.body.nome;
     const email = req.body.email;
     const celular = req.body.celular;
     const mensagem = req.body.mensagem;
 
-    // Configurações para o serviço de e-mail
-    const transporter = nodemailer.createTransport({
-        service: 'outlook',
-        auth: {
-            user: 'contato.riansantos@outlook.com', // Insira seu e-mail Gmail aqui
-            pass: 'Cudegorila69' // Insira sua senha do e-mail aqui
-        }
-    });
+    try {
+        // Configurações para o serviço de e-mail
+        const transporter = nodemailer.createTransport({
+            host: 'outlook', // Host de e-mail desejado
+            port: 587, // Porta do servidor SMTP
+            secure: false, // true para usar SSL/TLS, false para não usar
+            auth: {
+                user: 'contato.riansantos@outlook.com', // Meu e-mail
+                pass: 'Cudegorila69' // Senha do meu e-mail
+            }
+        });
 
-    // Detalhes do e-mail a ser enviado
-    const mailOptions = {
-        from: 'contato.riansantos@outlook.com', // Seu e-mail
-        to: 'riansantos.dev@gmail.com', // E-mail para onde deseja enviar a mensagem (pode ser o mesmo que o remetente)
-        subject: 'Nova mensagem recebida',
-        text: `Nome: ${nome}\nEmail: ${email}\nCelular: ${celular}\n\n${mensagem}`
-    };
+        // Detalhes do e-mail a ser enviado
+        const mailOptions = {
+            from: 'contato.riansantos@outlook.com', // Meu e-mail
+            to: 'riansantos.dev@gmail.com', // E-mail para sera enviado a mensagem
+            subject: 'Nova mensagem recebida',
+            text: `Nome: ${nome}\nEmail: ${email}\nCelular: ${celular}\n\n${mensagem}`
+        };
 
-    // Envia o e-mail
-    transporter.sendMail(mailOptions, function(error, info){
-        if (error) {
-            console.log(error);
-            res.send('Erro ao enviar mensagem.');
-        } else {
-            console.log('Email enviado: ' + info.response);
-            res.send('Mensagem enviada com sucesso!');
-        }
-    });
+        // Envia o e-mail
+        await transporter.sendMail(mailOptions);
+        console.log('Email enviado com sucesso.');
+        res.send('Mensagem enviada com sucesso!');
+    } catch (error) {
+        console.error('Erro ao enviar mensagem:', error);
+        res.status(500).send('Erro ao enviar mensagem.');
+    }
 });
 
 const PORT = process.env.PORT || 3000;
