@@ -2,7 +2,7 @@
   "build": {
     "functions": "functions/",
     "src": "src/",
-    "command": "npm run build"
+    "command": "node server.js"
   },
   "rewrites": [
     { "source": "/(.*)", "destination": "/server.js" }
