@@ -1,6 +1,10 @@
 {
+  "build": {
+    "functions": "functions/",
+    "src": "src/",
+    "command": "npm run build"
+  },
   "rewrites": [
     { "source": "/(.*)", "destination": "/server.js" }
   ]
 }
- 
