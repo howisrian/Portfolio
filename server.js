@@ -20,7 +20,7 @@ app.post('/enviar', async (req, res) => {
     try {
         // Configurações para o serviço de e-mail
         const transporter = nodemailer.createTransport({
-            host: 'outlook', // Host de e-mail desejado
+            host: 'outlook.com', // Host de e-mail desejado
             port: 587, // Porta do servidor SMTP
             secure: false, // true para usar SSL/TLS, false para não usar
             auth: {
