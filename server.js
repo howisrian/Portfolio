@@ -4,32 +4,30 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 
-
+// Middleware para analisar o corpo das solicitações POST
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(express.static(__dirname));
+// Servir arquivos estáticos da pasta "public"
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
 
-// Rota para enviar o e-mail
 app.post('/enviar', async (req, res) => {
     const { nome, email, celular, mensagem } = req.body;
 
     try {
-        // Configurações para o serviço de e-mail
         const transporter = nodemailer.createTransport({
-            host: 'outlook.com',
+            host: 'smtp.outlook.com', // Certifique-se de usar "smtp.outlook.com"
             port: 587,
             secure: false,
             auth: {
                 user: 'contato.riansantos@outlook.com',
-                pass: 'Cudegorila69' // Senha não deve ser hardcoded
+                pass: 'sua-senha-aqui'
             }
         });
 
-        // Detalhes do e-mail a ser enviado
         const mailOptions = {
             from: 'contato.riansantos@outlook.com',
             to: 'riansantos.dev@gmail.com',
@@ -37,7 +35,6 @@ app.post('/enviar', async (req, res) => {
             text: `Nome: ${nome}\nEmail: ${email}\nCelular: ${celular}\n\n${mensagem}`
         };
 
-        // Envia o e-mail
         await transporter.sendMail(mailOptions);
         console.log('Email enviado com sucesso.');
         res.send('Mensagem enviada com sucesso!');
@@ -47,8 +44,5 @@ app.post('/enviar', async (req, res) => {
     }
 });
 
-// Define a porta para o servidor
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Servidor rodando na porta ${PORT}`);
-});
+// Exportando o app como módulo para que o Vercel possa lidar com ele como API
+module.exports = app;
