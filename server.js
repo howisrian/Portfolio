@@ -4,35 +4,35 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 
+
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(__dirname + '/public'));
+
+app.use(express.static(__dirname));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
+// Rota para enviar o e-mail
 app.post('/enviar', async (req, res) => {
-    const nome = req.body.nome;
-    const email = req.body.email;
-    const celular = req.body.celular;
-    const mensagem = req.body.mensagem;
+    const { nome, email, celular, mensagem } = req.body;
 
     try {
         // Configurações para o serviço de e-mail
         const transporter = nodemailer.createTransport({
-            host: 'outlook.com', // Host de e-mail desejado
-            port: 587, // Porta do servidor SMTP
-            secure: false, // true para usar SSL/TLS, false para não usar
+            host: 'outlook.com',
+            port: 587,
+            secure: false,
             auth: {
-                user: 'contato.riansantos@outlook.com', // Meu e-mail
-                pass: 'Cudegorila69' // Senha do meu e-mail
+                user: 'contato.riansantos@outlook.com',
+                pass: 'Cudegorila69' // Senha não deve ser hardcoded
             }
         });
 
         // Detalhes do e-mail a ser enviado
         const mailOptions = {
-            from: 'contato.riansantos@outlook.com', // Meu e-mail
-            to: 'riansantos.dev@gmail.com', // E-mail para sera enviado a mensagem
+            from: 'contato.riansantos@outlook.com',
+            to: 'riansantos.dev@gmail.com',
             subject: 'Nova mensagem recebida',
             text: `Nome: ${nome}\nEmail: ${email}\nCelular: ${celular}\n\n${mensagem}`
         };
@@ -47,6 +47,7 @@ app.post('/enviar', async (req, res) => {
     }
 });
 
+// Define a porta para o servidor
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
