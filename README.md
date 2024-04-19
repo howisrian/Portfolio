@@ -35,7 +35,7 @@ Portfólio web desenvolvido com o intuito de apresentar minhas habilidades técn
 - HTML
 - CSS
 - JavaScript
-- PHP
+- Node
 
 # Autor
 
