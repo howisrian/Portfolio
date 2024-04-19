@@ -4,10 +4,9 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 
-// Middleware para analisar o corpo das solicitações POST
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Servir arquivos estáticos da pasta "public"
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
@@ -19,12 +18,12 @@ app.post('/enviar', async (req, res) => {
 
     try {
         const transporter = nodemailer.createTransport({
-            host: 'smtp.outlook.com', // Certifique-se de usar "smtp.outlook.com"
+            host: 'smtp.outlook.com', 
             port: 587,
             secure: false,
             auth: {
                 user: 'contato.riansantos@outlook.com',
-                pass: 'sua-senha-aqui'
+                pass: 'Cudegorila69'
             }
         });
 
@@ -44,5 +43,4 @@ app.post('/enviar', async (req, res) => {
     }
 });
 
-// Exportando o app como módulo para que o Vercel possa lidar com ele como API
 module.exports = app;
