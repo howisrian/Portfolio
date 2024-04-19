@@ -3,7 +3,7 @@
 
 # Sobre o projeto
 
-https://riansantos-dev.vercel.app/
+https://riansantos.vercel.app/
 
 
 Portfólio web desenvolvido com o intuito de apresentar minhas habilidades técnicas e conquistar clientes/jobs.
