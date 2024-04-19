@@ -164,3 +164,14 @@ revelar.reveal('.efeito-input5',
     delay: 2100
 })
 
+// Verifica a URL para o parâmetro 'success'
+function checkSuccessParameter() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+        // Exibe um alerta de sucesso
+        alert('E-mail enviado com sucesso!');
+    }
+}
+
+// Chama a função ao carregar a página
+window.onload = checkSuccessParameter;

@@ -35,12 +35,13 @@ app.post('/enviar', async (req, res) => {
         };
 
         await transporter.sendMail(mailOptions);
-        console.log('Email enviado com sucesso.');
-        res.send('Mensagem enviada com sucesso!');
+        console.log('E-mail enviado com sucesso.');
+
+        // Redireciona para a página principal com um parâmetro de sucesso
+        res.redirect('/?success=true');
     } catch (error) {
         console.error('Erro ao enviar mensagem:', error);
         res.status(500).send('Erro ao enviar mensagem.');
     }
 });
-
 module.exports = app;
