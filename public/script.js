@@ -164,12 +164,22 @@ revelar.reveal('.efeito-input5',
     delay: 2100
 })
 
-// Verifica a URL para o parâmetro 'success'
+function exibirAlertaSucesso() {
+    Swal.fire({
+        icon: 'success',
+        title: 'Sucesso!',
+        text: 'E-mail enviado com sucesso!',
+        confirmButtonText: 'OK',
+        timer: 3000  // Caixa de diálogo desaparece após 3 segundos
+    });
+}
+
+// Função para verificar o parâmetro 'success' na URL
 function checkSuccessParameter() {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.get('success') === 'true') {
-        // Exibe um alerta de sucesso
-        alert('E-mail enviado com sucesso!');
+        // Exibir caixa de diálogo de sucesso
+        exibirAlertaSucesso();
     }
 }
 
