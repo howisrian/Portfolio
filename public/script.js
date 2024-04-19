@@ -34,6 +34,17 @@ window.revelar = ScrollReveal({reset:true})
 
 // TOPO DO SITE
 
+
+const typed = new Typed ('.type-name', {
+    strings: ['Rian Santos'],
+    typeSpeed: 50,
+    backSpeed: 50,
+    backDelay: 1000,
+    loop: true
+});
+
+
+
 revelar.reveal('.efeito-txt-topo', 
 {
     duration: 2000,
